@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>NetLah.Extensions.ClockProvider</PackageId>
+    <PackageTags>timeprovider;system-clock;time-provider;aspnetcore;dotnet;netcore</PackageTags>
+    <TargetFrameworks>net9.0;net8.0;net6.0</TargetFrameworks>
+    <Description>Library support ASP.NET Core migration from ISystemClock to TimeProvider breakchange since .NET 8.0</Description>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>../../NetLah.snk</AssemblyOriginatorKeyFile>
+    <RootNamespace>NetLah.Extensions.ClockProvider</RootNamespace>
+    <AssemblyName>NetLah.Extensions.ClockProvider</AssemblyName>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE.txt" Pack="true" PackagePath="\" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+</Project>
