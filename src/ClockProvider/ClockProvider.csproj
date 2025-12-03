@@ -3,7 +3,7 @@
   <PropertyGroup>
     <PackageId>NetLah.Extensions.ClockProvider</PackageId>
     <PackageTags>timeprovider;system-clock;time-provider;aspnetcore;dotnet;netcore</PackageTags>
-    <TargetFrameworks>net9.0;net8.0;net6.0</TargetFrameworks>
+    <TargetFrameworks>net10.0;net9.0;net8.0;net6.0</TargetFrameworks>
     <Description>Library support ASP.NET Core migration from ISystemClock to TimeProvider breakchange since .NET 8.0</Description>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>../../NetLah.snk</AssemblyOriginatorKeyFile>
@@ -11,6 +11,9 @@
     <AssemblyName>NetLah.Extensions.ClockProvider</AssemblyName>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+    <SuppressTfmSupportBuildErrors>true</SuppressTfmSupportBuildErrors>
+    <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
   </PropertyGroup>
 
   <ItemGroup>

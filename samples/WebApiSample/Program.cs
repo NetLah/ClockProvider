@@ -46,7 +46,11 @@ app.MapGet("/weatherforecast", () =>
     var forecast = Enumerable.Range(1, 5).Select(index =>
         new WeatherForecast
         (
+#if NET8_0_OR_GREATER
             DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+#else
+            DateTime.Now.Date.AddDays(index),
+#endif
             Random.Shared.Next(-20, 55),
             summaries[Random.Shared.Next(summaries.Length)]
         ))
@@ -56,7 +60,14 @@ app.MapGet("/weatherforecast", () =>
 
 app.Run();
 
+#if NET8_0_OR_GREATER
 internal record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 }
+#else
+internal record WeatherForecast(DateTime Date, int TemperatureC, string? Summary)
+{
+    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+}
+#endif

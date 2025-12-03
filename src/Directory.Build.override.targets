@@ -1,0 +1,6 @@
+<Project>
+
+  <ItemGroup Condition="'$(NET_8_0)' == true">
+  </ItemGroup>
+
+</Project>
